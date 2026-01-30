@@ -1,0 +1,193 @@
+<html lang="en">
+                                                                                                                                                                                                                                               <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+     <nav class="header-section">
+       <img class="hot-beans-logo" src="graphics/logo.webp" alt="">
+        <div class="button">
+            <a href="index.html"><p>HOME</p></a>
+            <hr>
+        </div>
+         <div class="button">
+            <a href="about-us.html"><p>ABOUT US</p></a>
+            <hr>
+        </div>
+
+          <div class="button home">
+           <p>THE TEAM</p>
+            <hr>
+        </div>
+          <div class="button">
+            <a href="apply-now.html"><p>APPLY NOW</p></a>
+            <hr>
+        </div>
+          <div class="button right">
+            <a href="courses.html"><p>COURSES</p></a>
+            <hr>
+        </div>
+    </nav>
+    
+    <main> 
+        <div class="section-1">
+          <div class="slider">
+              <div class="group left">
+    <img class="personContainer" src="graphics/abdul-baghdad.webp" alt="">
+    <div class="information">
+        <p class="title"><small>MEET</small> <br><b>OUR TEAM</b></p>
+        <p class="position"><i><b>Omar Al-Karim</b> / Chief Technology Officer</i></p>
+        <div class="more-info">
+            <p>Specialist in cloud architecture and distributed systems.</p>
+            <p>Built high-availability platforms for enterprise clients.</p>
+            <p>Expertise: AWS, Kubernetes, System Scaling</p>
+        </div>
+    </div>
+</div>
+
+<div class="group left">
+    <img class="personContainer" src="graphics/abdul-redneck.webp" alt="">
+    <div class="information">
+        <p class="title"><small>MEET</small> <br><b>OUR TEAM</b></p>
+        <p class="position"><i><b>Samira Haddad</b> / Lead UX/UI Designer</i></p>
+        <div class="more-info">
+            <p>Passionate about human-centered design.</p>
+            <p>Created interfaces for over 50+ SaaS applications.</p>
+            <p>Expertise: Figma, Design Systems, Accessibility</p>
+        </div>
+    </div>
+</div>
+
+<div class="group left">
+    <img class="personContainer" src="graphics/christiano-rashid.webp" alt="">
+    <div class="information">
+        <p class="title"><small>MEET</small> <br><b>OUR TEAM</b></p>
+        <p class="position"><i><b>Christian Ramos</b> / Senior Front-End Developer</i></p>
+        <div class="more-info">
+            <p>Writes pixel-perfect and high-performance web interfaces.</p>
+            <p>Contributor to multiple open-source React libraries.</p>
+            <p>Expertise: React, TypeScript, Web Animations</p>
+        </div>
+    </div>
+</div>
+
+<div class="group">
+    <img class="personContainer" src="graphics/abdul-fahid.webp" alt="">
+    <div class="information">
+        <p class="title"><small>MEET</small> <br><b>OUR TEAM</b></p>
+        <p class="position"><i><b>Fahid Noor</b> / Back-End Engineer</i></p>
+        <div class="more-info">
+            <p>Focuses on building scalable and secure APIs.</p>
+            <p>Loves optimizing databases and refactoring legacy systems.</p>
+            <p>Expertise: Node.js, PostgreSQL, API Security</p>
+        </div>
+    </div>
+</div>
+
+<div class="group">
+    <img class="personContainer" src="graphics/abdul-haddam.webp" alt="">
+    <div class="information">
+        <p class="title"><small>MEET</small> <br><b>OUR TEAM</b></p>
+        <p class="position"><i><b>Mariam Haddam</b> / Digital Marketing Strategist</i></p>
+        <div class="more-info">
+            <p>Helps brands grow through data-driven campaigns.</p>
+            <p>Manages SEO, paid ads, and analytics for clients worldwide.</p>
+            <p>Expertise: SEO, SEM, Conversion Optimization</p>
+        </div>
+    </div>
+</div>
+
+<div class="group">
+    <img class="personContainer" src="graphics/abdul-rashid.webp" alt="">
+    <div class="information">
+        <p class="title"><small>MEET</small> <br><b>OUR TEAM</b></p>
+        <p class="position"><i><b>Rashid Al-Fayed</b> / CEO & Founder</i></p>
+        <div class="more-info">
+            <p>Founded the company with a vision for innovative digital solutions.</p>
+            <p>10+ years leading teams across software, design, and marketing.</p>
+            <p>Expertise: Business Strategy, Product Leadership, Innovation</p>
+        </div>
+    </div>
+</div>
+                 
+            </div>
+             <div class="arrow">
+              <button class="icon arrow-icon  back"></button>
+              <button class="icon arrow-icon  next"></button>
+          </div>
+          </div>
+         
+        </div>
+
+    </main>
+
+    <footer class="footer-section">
+        <p>Help</p>
+        <p>Anti-Slavery statement</p>
+        <p>© 2025 Hot Beans</p>
+        <p>Accessibility at Hot Beans</p>
+        <p>Terms</p>
+    </footer>
+</body>
+<script>
+const slider = document.querySelector(".slider");
+const backArrow = document.querySelector(".back");
+const nextArrow = document.querySelector(".next");
+const groups = document.querySelectorAll(".group");
+
+let rafId = null;
+let suppressHoverUntil = 0;
+
+function smoothScrollTo(element, target, duration = 800) {
+  if (rafId) cancelAnimationFrame(rafId);
+
+  const max = element.scrollWidth - element.clientWidth;
+  target = Math.max(0, Math.min(target, max));
+
+  const start = element.scrollLeft;
+  const distance = target - start;
+  const startTime = performance.now();
+
+  function animate(time) {
+    const progress = Math.min((time - startTime) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    element.scrollLeft = start + distance * ease;
+
+    if (progress < 1) {
+      rafId = requestAnimationFrame(animate);
+    } else {
+      rafId = null;
+    }
+  }
+
+  rafId = requestAnimationFrame(animate);
+}
+
+backArrow.addEventListener("click", () => {
+  suppressHoverUntil = performance.now() + 600; 
+  smoothScrollTo(slider, slider.scrollLeft - 1000, 800);
+});
+
+nextArrow.addEventListener("click", () => {
+  suppressHoverUntil = performance.now() + 600;
+  smoothScrollTo(slider, slider.scrollLeft + 1000, 800);
+});
+
+groups.forEach(group => {
+  group.addEventListener("mouseenter", () => {
+    if (performance.now() < suppressHoverUntil) return;
+
+    const groupRect = group.getBoundingClientRect();
+    const sliderRect = slider.getBoundingClientRect();
+
+    const groupCenterInSlider = (groupRect.left - sliderRect.left) + groupRect.width / 2;
+    const target = slider.scrollLeft + groupCenterInSlider - slider.clientWidth / 2;
+
+    smoothScrollTo(slider, target, 800);
+  });
+});
+</script>
+</html>

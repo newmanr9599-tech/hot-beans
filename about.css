@@ -1,0 +1,90 @@
+:root{
+    --font: sans-serif;
+    --main-color: #364fab;
+    --font-nav-color: #364fab;
+    --font-button-1-color: white;
+    --font-footer-color: white;
+    --footer-color: #364fab; 
+    --font-size: 1.5em;
+
+    --padding: 5em;
+}
+body{
+    margin: 0;
+    *{
+        animation: load 1s;
+        user-select: none;
+        transition: 100ms ease-in-out;
+    }
+
+    main{
+        .section-1{
+             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--padding);
+             background-image: url(graphics/banner.webp);
+           height: 60%;
+            img{
+                
+                visibility: var;
+                width: 70em;
+    
+            }
+        }
+        .section-2{
+            padding: var(--padding);
+            display: flex;
+        justify-content: space-evenly;
+        gap: 1em;
+        background-color: var(--main-color);
+        .arrow{
+            background-position: 10px -50px;
+        }
+         .integrity{
+            background-position: -45px -50px;
+        }
+         .customer{
+            width: 50px;
+            flex: 0 0 50px; 
+            background-position: -100px 0px;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            img{
+                width: 5em;
+                height: 5em;
+            }
+           .text-box{
+            display: flex;
+            flex-direction: column;
+          
+             p{
+                margin: 0;
+                font-family: var(--font);
+                color:  white;
+                font-size: calc(var(--font-size) *0.7);
+            
+           }
+             .value{
+                font-size: calc(var(--font-size))
+            }
+        }
+        }        }
+        
+
+    .footer-section{
+        display: flex;
+        background-color: var(--footer-color);
+        p{
+            margin: 2em;
+            font-family: var(--font);
+            color: var(--font-footer-color);
+            font-size: calc(var(--font-size)*0.6);
+        }
+    }
+}
+}

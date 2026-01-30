@@ -1,0 +1,145 @@
+:root{
+    --font: sans-serif;
+    --main-color: #364fab;
+    --font-nav-color: #364fab;
+    --font-button-1-color: #364fab;
+    --font-footer-color: white;
+    --footer-color: #364fab; 
+    --font-size: 1.5em;
+
+    --image-scale: 10rem;
+
+    --padding: 5em;
+}
+
+body{
+    margin: 0;
+    *{
+        animation: load 1s;
+        user-select: none;
+        transition: 100ms ease-in-out;
+    }
+
+    main{
+        background-image: url(graphics/banner.jpg);
+        .section-1{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            padding: var(--padding);
+              p, textarea, button, .error{
+                margin: 0;
+                font-family: var(--font);
+                color: var(--main-color);
+                font-size: calc(var(--font-size) *0.7);
+            
+           }
+            .location {
+                        width: 50px;
+
+                        flex: 0 0 50px;
+                        background-position: -100px -50px;
+                        scale: 0.4;
+
+                    }
+
+                    .department {
+                        width: 50px;
+
+                        flex: 0 0 50px;
+                        background-position: -150px -0px;
+                        scale: 0.4;
+
+                    }
+
+                    .type {
+                        width: 50px;
+
+                        flex: 0 0 50px;
+                        background-position: -10px -100px;
+                        scale: 0.4;
+
+                    }
+
+                    .salary {
+                        width: 50px;
+
+                        flex: 0 0 50px;
+                        background-position: -150px -50px;
+                        scale: 0.4;
+
+                    }
+           .apply-title{
+            font-size: calc(var(--font-size) *1.2);
+           }
+           .title{
+            font-size: calc(var(--font-size) *1.5);
+           }
+            .columnLeft{
+                border-radius: 1em;
+                padding: 2em;
+                background-color: white;
+                width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            gap: 2em;
+
+            .header{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+            }
+
+            .error{
+                color: red;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                
+                textarea{
+                    padding: 1em;
+                    border-color: var(--main-color);
+                    border-radius: 1em;
+                }
+                  button{
+                    background-color: white;
+                    width: fit-content;
+                border-radius: 1em;
+                border: 1px solid var(--main-color);
+            }
+            button:hover{
+               border: 2px solid black;
+            }
+            }
+           }
+           .columnRight{
+            border-radius: 1em;
+            padding: 2em;
+            background-color: white;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            .job-details{
+                  font-size: calc(var(--font-size) *1.2);
+            }
+            .group{
+                display: flex;
+                padding: 1em;
+                img{
+                    width: 1em;
+                    height: 1em;
+                }
+            }
+          
+           }
+          
+        }
+    }
+    }
+
+    

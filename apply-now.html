@@ -1,0 +1,332 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="apply.css">
+    <link rel="stylesheet" href="nav.css">
+    
+</head>
+<body>
+    <nav class="header-section">
+       <img class="hot-beans-logo" src="graphics/logo.webp" alt="">
+        <div class="button">
+           <a href="index.html"> <p>HOME</p></a>
+            <hr>
+        </div>
+        <div class="button">
+            <a href="about-us.html"><p>ABOUT US</p></a>
+            <hr>
+        </div>
+          <div class="button">
+           <a href="the-team.html"> <p>THE TEAM</p></a>
+            <hr>
+        </div>
+          <div class="button home">
+            <p>APPLY NOW</p>
+            <hr>
+        </div>
+          <div class="button right">
+            <a href="courses.html"><p>COURSES</p></a>
+            <hr>
+        </div>
+    </nav>
+
+   <main>
+
+   <div class="section-1">
+    <div class="side-bar">
+        <div class="top">
+            <p><b>We are looking for...</b></p>
+            <img src="graphics/logo.webp" alt="">
+        </div>
+
+        <button onclick="showJob(0)" class="job-button trainee-web-developer-choice shadow">
+            <div class="icon html"></div>
+            <div class="brief-information">
+                <p class="position"><b>Trainee Web Developer</b></p>
+                <p class="department"><i>Engineering / Web Development</i></p>
+                <p class="introduction">Entry-level developer learning core web development skills.</p>
+                 <br>
+                <div class="extra-information">
+                    <p>Learning</p>
+                    <p>Supportive</p>
+                    <p>Growth</p>
+                </div>
+            </div>
+        </button>
+
+           <button onclick="showJob(1)" class="job-button senior-web-developer-choice">
+            <div class="icon html"></div>
+            <div class="brief-information">
+                <p class="position"><b>Senior Web Developer</b></p>
+                <p class="department"><i>Engineering / Technical Leadership</i></p>
+                <p class="introduction">Advanced developer who leads technical direction and complex builds.</p>
+                 <br>
+                <div class="extra-information">
+                    <p>Expert</p>
+                    <p>Strategic</p>
+                    <p>Lead</p>
+                </div>
+            </div>
+        </button>
+
+
+        <button onclick="showJob(2)" class="job-button web-analyst-choice">
+            <div class="icon seo"></div>
+            <div class="brief-information">
+                <p class="position"><b>Web Analyst</b></p>
+                <p class="department"><i>Data / Marketing / Product</i></p>
+                <p class="introduction">Analyzes user behavior and website performance.</p>
+                 <br>
+                <div class="extra-information">
+                    <p>Analytical</p>
+                    <p>Insightful</p>
+                    <p>Strategic</p>
+                </div>
+            </div>
+        </button>
+
+     
+        
+    </div>
+        <div class="job-info-bar trainee-web-developer">
+           <div class="apply-bar">
+            <div class="icon html"></div>
+             <p class="position"><b>Trainee Web Developer</b></p>
+             <a href="vacancy-trainee.html"><p>Apply now</p></a>
+           </div>
+
+            <div class="details-bar">
+
+                <div class="container">
+                    <div class="group">
+                        <div class="icon location"></div>
+                        <p>Location</p>
+                    </div>
+                    <p><b>London</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                    <div class="icon department"></div>
+                        <p>Department</p>
+                    </div>
+                    <p><b>Engineering / Web Development</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                       <div class="icon type"></div>
+                        <p>Type</p>
+                    </div>
+                    <p><b>Remote</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                        <div class="icon salary"></div>
+                       
+                        <p>Salary</p>
+                    </div>
+                    <p><b>$25,000 – $40,000</b></p>
+                </div>
+
+                
+            </div>
+
+            <div class="job-description">
+                <div class="heading">
+                    <p><b>Job Description</b></p>
+                    <p class="left"><b>Posted on:</b> September 26 2025</p>
+                </div>
+                <br>
+                <p class="paragraph">The Trainee Web Developer supports the engineering team by assisting with simple tasks such as fixing minor bugs, updating content, and performing basic front-end or back-end operations. This role is designed to help new talent grow while contributing to the project. 
+                    <br> <br> We need this role because our team requires support in handling smaller tasks, freeing senior developers to focus on advanced features. Additionally, bringing in trainees helps build long-term internal expertise and supports future company growth.</p>
+            </div>
+
+            <div class="job-qualifications">
+                <p><b>Job Qualifications</b></p>
+                <ul>
+                    <li>Basic understanding of HTML, CSS, JavaScript</li>
+                    <li>Willingness to learn frameworks (React, Node.js, etc.)</li>
+                    <li>Familiarity with Git is a plus</li>
+                    <li>Strong eagerness to improve and accept feedback</li>
+                    <li>Good communication with senior staff</li>
+                </ul>
+            </div>
+
+        </div>
+
+          <div class="job-info-bar senior-web-developer hide">
+           <div class="apply-bar">
+            <div class="icon html"></div>
+             <p class="position"><b>Senior Web Developer</b></p>
+             <a href="vacancy-senior.html"><p>Apply now</p></a>
+           </div>
+
+            <div class="details-bar">
+
+                <div class="container">
+                    <div class="group">
+                       <div class="icon location"></div>
+                        <p>Location</p>
+                    </div>
+                    <p><b>London</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                       <div class="icon department"></div>
+                        <p>Department</p>
+                    </div>
+                    <p><b>Engineering / Technical Leadership</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                       <div class="icon type"></div>
+                        <p>Type</p>
+                    </div>
+                    <p><b>Remote</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                        <div class="icon salary"></div>
+                       
+                        <p>Salary</p>
+                    </div>
+                    <p><b>$100,000 – $170,000</b></p>
+                </div>
+
+                
+            </div>
+
+            <div class="job-description">
+                <div class="heading">
+                    <p><b>Job Description</b></p>
+                    <p class="left"><b>Posted on:</b> September 26 2025</p>
+                </div>
+                <br>
+                <p class="paragraph">The Senior Web Developer architect and develops advanced solutions, mentors junior developers, and ensures the technical quality of the project. They handle high-level tasks such as performance optimization, system design, code reviews, and integration of new technologies. 
+                    <br> <br> We need this role because our products are scaling fast, requiring experienced leadership to maintain code standards, guide architecture decisions, and handle complex features that junior developers cannot manage alone.</div>
+
+            <div class="job-qualifications">
+                <p><b>Job Qualifications</b></p>
+                <ul>
+                    <li>5–10+ years of development experience</li>
+                    <li>Expertise in JavaScript, frameworks, and back-end languages</li>
+                    <li>Strong understanding of system architecture</li>
+                    <li>Leadership, mentoring, and code review experience</li>
+                    <li>Familiarity with CI/CD, cloud environments, and best practices</li>
+                </ul>
+            </div>
+
+        </div>
+
+          <div class="job-info-bar web-analyst hide">
+           <div class="apply-bar">
+            <div class="icon seo"></div>
+             <p class="position"><b>Web Analyst</b></p>
+             <a href="vacancy-data.html"><p>Apply now</p></a>
+           </div>
+
+            <div class="details-bar">
+
+                <div class="container">
+                    <div class="group">
+                        <div class="icon location"></div>
+                        <p>Location</p>
+                    </div>
+                    <p><b>London</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                        <div class="icon department"></div>
+                        <p>Department</p>
+                    </div>
+                    <p><b>Data / Marketing / Product</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                        <div class="icon type"></div>
+                        <p>Type</p>
+                    </div>
+                    <p><b>Remote</b></p>
+                </div>
+
+                  <div class="container">
+                    <div class="group">
+                        <div class="icon salary"></div>
+                       
+                        <p>Salary</p>
+                    </div>
+                    <p><b>$55,000 – $95,000</b></p>
+                </div>
+
+                
+            </div>
+
+            <div class="job-description">
+                <div class="heading">
+                    <p><b>Job Description</b></p>
+                    <p class="left"><b>Posted on:</b> September 26 2025</p>
+                </div>
+                <br>
+                <p class="paragraph">The Web Analyst tracks, measures, and interprets website data to improve user engagement, conversions, and business outcomes. They work closely with marketing, product, and development teams to understand how people use the site and where improvements should be made. 
+                    <br><br> We need this role because as our traffic increases, we require data-driven insights to optimize user journeys, refine content strategies, and ensure our website continues performing at industry-leading standards.</div>
+
+            <div class="job-qualifications">
+                <p><b>Job Qualifications</b></p>
+                <ul>
+                    <li>Experience with Google Analytics, GA4, and Tag Manager</li>
+                    <li>Knowledge of SEO metrics and funnel analysis</li>
+                    <li>Ability to create dashboards and reports</li>
+                    <li>Understanding of user behavior and UX data</li>
+                    <li>Strong analytical and communication skills</li>
+                </ul>
+            </div>
+
+        </div>
+   </div>
+
+   </main>
+    <footer class="footer-section">
+        <p>Help</p>
+        <p>Anti-Slavery statement</p>
+        <p>© 2025 Hot Beans</p>
+        <p>Accessibility at Hot Beans</p>
+        <p>Terms</p>
+    </footer>
+</body>
+<script>
+    let currentIndex = 0
+        const jobElements = [
+           document.querySelector(".trainee-web-developer"),
+           document.querySelector(".senior-web-developer"),
+           document.querySelector(".web-analyst")
+        ];
+         const choiceElements = [
+           document.querySelector(".trainee-web-developer-choice"),
+           document.querySelector(".senior-web-developer-choice"),
+           document.querySelector(".web-analyst-choice")
+        ];
+        
+        function showJob(index){
+            if( index == currentIndex){
+                return;
+            }
+              jobElements[index].classList.toggle("hide");
+             jobElements[currentIndex].classList.toggle("hide");
+
+             choiceElements[index].classList.toggle("shadow");
+             choiceElements[currentIndex].classList.toggle("shadow");
+            currentIndex = index;
+          
+        };
+   
+   </script>
+</html>

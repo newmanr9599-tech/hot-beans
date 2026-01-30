@@ -1,0 +1,125 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+   .icon {
+                    width: 60px;
+                    height: 50px;
+
+                    flex: 0 0 60px; 
+                    display: block;
+
+                    background-image: url("graphics/icon-sprite.webp");
+                    background-size: 250px 150px;
+
+                    
+                    background-repeat: no-repeat;
+                }
+
+.header-section{
+     animation: slideDown 1s ease-out;
+          display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+         .hot-beans-logo{
+            width: 15em;
+            size: 15em;
+            margin-right: auto;
+            padding: 2em;
+        }
+        p{
+             color: var(--font-nav-color);
+                    font-size: calc(var(--font-size) * 1);
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        .button{    
+                    padding: 0.5em;
+                    font-family: var(--font);
+                
+                    *{
+                        margin: 0;
+                    }
+                    hr {
+                        border-color: var(--main-color);
+                        visibility: hidden;
+                         transform: scaleX(0);
+                         transform-origin: center;
+                        width: 0
+                    }
+                }
+            .home hr{
+                  visibility: visible;
+                transform: scaleX(1);
+               width: 100%;
+            }
+        .right{
+            margin-right: 40%;
+        }
+        .button:hover hr{
+                visibility: visible;
+                transform: scaleX(1);
+               width: 100%;
+            
+        }
+    }
+
+main{
+     animation: slideUp 1s ease-out;
+}
+
+.footer-section{
+        display: flex;
+        background-color: var(--footer-color);
+        p{
+            margin: 2em;
+            font-family: var(--font);
+            color: var(--font-footer-color);
+            font-size: calc(var(--font-size)*0.6);
+        }
+    }
+
+    @keyframes slideDown {
+        from{
+            transform: translateY(-35%);
+        }
+        to{
+            transform: translateY(0%);
+        }
+    }
+
+      @keyframes slideUp {
+        from{
+            transform: translateY(35%);
+        }
+        to{
+            transform: translateY(0%);
+        }
+    }
+  
+
+    @media only screen and (max-width: 900px) {
+        .header-section{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+             .right{
+            margin-right: 0;
+        }
+        }
+}
